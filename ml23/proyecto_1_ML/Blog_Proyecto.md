@@ -38,6 +38,15 @@ En este caso, t-SNE nos permite observar mas claramente los clusters dentro de l
 Cada color en los diagramas de dispersión representa un dígito diferente (0-9) en el conjunto de datos.
 
 ## Seccion 2: Entrenamiento
+
+### Preprocesamiento
+
+La estandarización se realiza utilizando StandardScaler de scikit-learn, que estandariza el conjunto de datos para que tenga media = 0 y varianza = 1.
+```
+scaler = StandardScaler()
+scaler.fit(data_train)
+```
+
 Utilizaremos tres modelos diferentes:
 
 - K-Nearest Neighbors (KNN)
