@@ -168,3 +168,9 @@ plt.show()
 
 ### **K-Means**
 ![kmenas_visual](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/b9641a02-c929-4120-ab26-e1ad8c7d0629)
+
+### 3.2 (Inferencia) Coomparar rendimiento de distintos modelos
+
+En esta sección se evalúa los modelos entrenados en el conjunto de validación utilizando alguna métrica vista en clase (accuracy, F1, Precision, Recall etc.) y se determina cuantitativamente cual funciona mejor. 
+
+En el proyecto, se emplearon varias métricas de clasificación para evaluar cuantitativamente y comparar el rendimiento de diferentes modelos de aprendizaje(KNN, SVM y K-Means) en la tarea de clasificación de dígitos. Esto facilitó una comparación directa de los resultados, lo que permitió identificar el modelo que funcionó de manera óptima y proporcionó información valiosa sobre las fortalezas y debilidades de cada enfoque.
