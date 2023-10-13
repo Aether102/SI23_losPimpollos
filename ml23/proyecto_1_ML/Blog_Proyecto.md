@@ -53,11 +53,18 @@ Utilizaremos tres modelos diferentes:
 
 **1. K-Nearest Neighbors (KNN) (aprendizaje supervisado)**
 
-- Aprendizaje no paramétrico y diferido: KNN no hace suposiciones sobre la distribución de datos y no utiliza parámetros para predecir. Utiliza directamente los datos de entrenamiento durante la predicción, lo que puede resultar útil cuando el límite de decisión es irregular.
+- Aprendizaje no paramétrico: KNN no hace suposiciones sobre la distribución de datos y no utiliza parámetros para predecir. Utiliza directamente los datos de entrenamiento durante la predicción, lo que puede resultar útil cuando el límite de decisión es irregular.
 - Clasificación multiclase: KNN naturalmente admite la clasificación multiclase, lo que la hace apta para la clasificación de dígitos donde hay múltiples clases (0-9).
 
 **2. Support Vector Machines (SVM) (aprendizaje supervisado)**
+
+- Efectivo en espacios de alta dimensión: dado que los datos de imagen pueden ser de alta dimensión, SVM es capaz de manejar esto a través de su efectividad en espacios de alta dimensión.
+- Truco del kernel: la capacidad de utilizar diferentes funciones del kernel permite a SVM resolver problemas no lineales, lo que puede ser beneficioso si los dígitos forman grupos separables no linealmente en el espacio de características.
+
 **3. K-Means Clustering (aprendizaje no supervisado)**
+
+- Aprendizaje no supervisado: K-Means es fundamentalmente un algoritmo de aprendizaje no supervisado, que normalmente se utiliza para agrupar en lugar de clasificar. Fue elegido aquí para ilustrar los desafíos y resultados del uso de un algoritmo de agrupamiento para una tarea de clasificación.
+- Exploración de datos: a veces puede revelar patrones o agrupaciones interesantes en los datos que podrían no ser evidentes con los datos etiquetados.
 
 ```
 from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
