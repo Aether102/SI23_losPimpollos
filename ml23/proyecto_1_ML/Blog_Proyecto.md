@@ -39,3 +39,4 @@ for c in labels:
     ax[1].scatter(plot_data_tsne[:, 0], plot_data_tsne[:, 1], label=f"Grupo {c}")
     ax[1].set_title("t-SNE")
 ``` 
+![pca_and_tsne](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/7597b5b8-262b-4740-aad8-edb0f00b561d)
