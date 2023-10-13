@@ -69,7 +69,7 @@ Utilizaremos tres modelos diferentes:
 El uso de diferentes tipos de algoritmos permite realizar un análisis comparativo sólido. Estos algoritmos sirven como buenos puntos de referencia debido a su popularidad y amplio uso en la comunidad de aprendizaje de maquina.
 
 ### Procedimiento
-Importar dependencias
+Importar clases requeridas
 ```
 from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
 from sklearn.svm import SVC                        # Support Vector Classifier
