@@ -86,4 +86,5 @@ def train(X, label, model_type:str):
     elif model_type == "kmeans":
         estimator = KMeans(n_clusters=len(np.unique(label)))  # Numero de clusters igual al numero de digitos
 ...
+return estimator
 ```
