@@ -121,3 +121,39 @@ Graficar los datos de VALIDACIÓN reducidos
 ![kmeans](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/78ca7f66-7514-4fb6-8bca-cecb13f44f49)
 
 ### 3.2 (Inferencia) Visualizar imagenes en cada grupo/clase
+
+El siguiente código llama al método de inferencia anteriormente definido.
+```
+def vis_preds(trained_model, data_val, target_val, model_name):
+...
+    for group, ax in zip(group_pred, axes):
+        #======================= Start  solution=====================
+        # TODO: Filtra data_val para quedarte solamente con aquellos elementos
+        # donde la predicción de tu modelo sea igual a group
+        # Haz lo mismo para las etiquetas
+        mask = (preds == group)
+        filtered_data_val = data_val[mask]
+        filtered_target_val = target_val[mask]
+
+        # TODO: Selecciona una imagen de los datos en data_val donde pred == group
+        # y selecciona la etiqueta real para dicha imagén para mostrarlos juntos
+        # Investiga: np.random.randint, np.random.choice etc.
+        random_idx = np.random.choice(len(filtered_data_val))
+        img_vector = filtered_data_val[random_idx]
+        gt = filtered_target_val[random_idx]
+
+        # TODO: Calcula la predicción del modelo para la imagen aleatoria
+        # usando el modelo entrenado "trained_model"
+        pred = inference(trained_model, img_vector)
+
+        # TODO: La predicción del modelo usa la imagen en forma de vector (1xD)
+        # pero para visualizarla tenemos que cambia de forma a una imagen de 8x8 pixeles
+        # Cambia la forma de la imagen usando np.reshape a (8, 8)
+        img = img_vector.reshape((8, 8))
+        
+        # TODO: Visualiza la imagen de 8x8 usando ax.matshow Similar al inicio del ejercicio
+        # Revisa la documentación de ser necesario
+        ax.matshow(img, cmap=plt.cm.gray)
+...
+plt.show()
+```
