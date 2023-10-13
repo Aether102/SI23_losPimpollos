@@ -51,13 +51,13 @@ scaler.fit(data_train)
 
 Utilizaremos tres modelos diferentes:
 
-- **K-Nearest Neighbors (KNN) (aprendizaje supervisado)**
+**1. K-Nearest Neighbors (KNN) (aprendizaje supervisado)**
 
 - Aprendizaje no paramétrico y diferido: KNN no hace suposiciones sobre la distribución de datos y no utiliza parámetros para predecir. Utiliza directamente los datos de entrenamiento durante la predicción, lo que puede resultar útil cuando el límite de decisión es irregular.
 - Clasificación multiclase: KNN naturalmente admite la clasificación multiclase, lo que la hace apta para la clasificación de dígitos donde hay múltiples clases (0-9).
 
-- **Support Vector Machines (SVM) (aprendizaje supervisado)**
-- **K-Means Clustering (aprendizaje no supervisado)**
+**2. Support Vector Machines (SVM) (aprendizaje supervisado)**
+**3. K-Means Clustering (aprendizaje no supervisado)**
 
 ```
 from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
