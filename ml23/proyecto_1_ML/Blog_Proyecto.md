@@ -77,7 +77,7 @@ from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
 from sklearn.svm import SVC                        # Support Vector Classifier
 from sklearn.cluster import KMeans                 # K Means
 ```
-2. Entrena el modelo y regresa modelo entrendo
+2. Entrena el modelo y regresa modelo entrenado
 ```
 def train(X, label, model_type:str):
 ...
