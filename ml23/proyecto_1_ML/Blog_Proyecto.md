@@ -25,4 +25,5 @@ tsne = TSNE(n_components=2)
 data_tsne = tsne.fit_transform(data_val)
 ``` 
 2. Graficar nuevos datos uno al lado del otro
+   
 ![pca_and_tsne](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/7597b5b8-262b-4740-aad8-edb0f00b561d)
