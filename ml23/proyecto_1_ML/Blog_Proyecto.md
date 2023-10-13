@@ -113,10 +113,9 @@ Graficar los datos de VALIDACIÓN reducidos
 ### **K-Nearest Neighbor**
 ![knn_test](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/4aa90342-c65e-4ae3-bd83-09ea56b01598)
 ### **SVM Linear**
-
-
+![svm_linear](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/bbcc939a-ffad-4cdc-b3e9-f40ecdf69f92)
 ### **SVM Radial**
-
-
+![svm_rbf](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/48c1952f-b02e-4f00-bfc1-1beb88ee5b42)
 ### **K-Means**
+![kmeans](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/78ca7f66-7514-4fb6-8bca-cecb13f44f49)
 
