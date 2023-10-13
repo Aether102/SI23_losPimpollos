@@ -109,3 +109,14 @@ Graficar los datos de VALIDACIÓN reducidos
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.show()
 ```
+
+### **K-Nearest Neighbor**
+![knn_test](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/4aa90342-c65e-4ae3-bd83-09ea56b01598)
+### **SVM Linear**
+
+
+### **SVM Radial**
+
+
+### **K-Means**
+
