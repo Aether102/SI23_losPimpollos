@@ -38,3 +38,6 @@ En este caso, t-SNE nos permite observar mas claramente los clusters dentro de l
 Cada color en los diagramas de dispersión representa un dígito diferente (0-9) en el conjunto de datos.
 
 ## Seccion 2: Entrenamiento
+Utilizaremos tres modelos diferentes: K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y K-Means.
+
+El uso de diferentes tipos de algoritmos permite realizar un análisis comparativo sólido. Estos algoritmos sirven como buenos puntos de referencia debido a su popularidad y amplio uso en la comunidad de aprendizaje de maquina.
