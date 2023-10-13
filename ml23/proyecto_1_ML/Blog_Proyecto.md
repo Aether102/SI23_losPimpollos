@@ -77,12 +77,13 @@ from sklearn.cluster import KMeans                 # K Means
 ```
 2. Entrena el modelo y regresa modelo entrendo
 ```
-def train(X, label, model_type:str):...
-
+def train(X, label, model_type:str):
+...
     if model_type == "knn":
         estimator = KNeighborsClassifier(n_neighbors=3)
     elif model_type == "svm":
         estimator = SVC(kernel='linear') 
     elif model_type == "kmeans":
-        estimator = KMeans(n_clusters=len(np.unique(label)))  # Numero de clusters igual al numero de unique labels
+        estimator = KMeans(n_clusters=len(np.unique(label)))  # Numero de clusters igual al numero de digitos
+...
 ```
