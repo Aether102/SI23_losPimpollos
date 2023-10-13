@@ -92,3 +92,5 @@ def train(X, label, model_type:str):
 ...
 return estimator
 ```
+
+## 3. Evaluación y análisis de las predicciones
