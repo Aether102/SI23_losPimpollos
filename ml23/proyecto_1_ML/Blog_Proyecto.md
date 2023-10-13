@@ -94,3 +94,18 @@ return estimator
 ```
 
 ## 3. Evaluación y análisis de las predicciones
+
+Graficar los datos de VALIDACIÓN reducidos
+```
+    for i, reduced_data, title in zip(range(2), [data_pca, data_tsne], ["PCA", "t-SNE"]):
+        for g in groups:
+            # TODO: Grafica los datos de VALIDACIÓN reducidos (reduced_data.shape = (N, 2))
+            # Tal que grafiques aquellos que correspondan al grupo/clase group
+            # Investiga plt.scatter, np.where o cómo filtrar arreglos dada una condición booleana
+            mask = (preds ==g)
+            ax[i].scatter(reduced_data[mask, 0], reduced_data[mask, 1], label=f"Group {g}")
+        
+        ax[i].legend(loc='upper left', bbox_to_anchor=(1, 1))
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+    plt.show()
+```
