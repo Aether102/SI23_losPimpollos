@@ -47,6 +47,8 @@ scaler = StandardScaler()
 scaler.fit(data_train)
 ```
 
+### Modelos de entrenamiento
+
 Utilizaremos tres modelos diferentes:
 
 - K-Nearest Neighbors (KNN)
