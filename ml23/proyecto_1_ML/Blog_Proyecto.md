@@ -199,3 +199,7 @@ def evaluate_model(trained_model, data_val, target_val, model_name):
 
 <img width="141" alt="svmrbf metrica" src="https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/924c4b8a-20e2-4662-8423-227e37c22038">
 <img width="142" alt="kmenas metrics" src="https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/5b3be906-58c3-4ea8-9555-5c61d2591a19">
+
+## Conclusion
+
+En resumen, mantener nuestros datos en alta dimensionalidad fue clave para conservar detalles importantes que ayudan a distinguir los dígitos. Elegimos el aprendizaje supervisado, utilizando métodos como KNN y SVM, porque utiliza ejemplos conocidos para hacer predicciones futuras, lo cual es útil para clasificar cosas en categorías, como identificar dígitos. También era vital asegurarnos de que todos los datos de nuestras imágenes estuvieran normalizados o ajustados a una escala común. Este paso aseguró que ninguna parte de nuestros datos tuviera demasiada influencia sobre nuestros modelos solo por su tamaño, lo que ayudó a que nuestros modelos aprendieran de manera justa de todas las partes de los datos y mantuvo nuestro entrenamiento estable. 
