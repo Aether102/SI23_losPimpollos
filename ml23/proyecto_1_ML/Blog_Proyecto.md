@@ -65,14 +65,11 @@ Utilizaremos tres modelos diferentes:
 
 - Aprendizaje no supervisado: K-Means es fundamentalmente un algoritmo de aprendizaje no supervisado, que normalmente se utiliza para agrupar en lugar de clasificar. Fue elegido aquí para ilustrar los desafíos y resultados del uso de un algoritmo de agrupamiento para una tarea de clasificación.
 - Exploración de datos: a veces puede revelar patrones o agrupaciones interesantes en los datos que podrían no ser evidentes con los datos etiquetados.
+ 
+El uso de diferentes tipos de algoritmos permite realizar un análisis comparativo sólido. Estos algoritmos sirven como buenos puntos de referencia debido a su popularidad y amplio uso en la comunidad de aprendizaje de maquina.
 
 ```
 from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
 from sklearn.svm import SVC                        # Support Vector Classifier
 from sklearn.cluster import KMeans                 # K Means
 ```
-   
-El uso de diferentes tipos de algoritmos permite realizar un análisis comparativo sólido. Estos algoritmos sirven como buenos puntos de referencia debido a su popularidad y amplio uso en la comunidad de aprendizaje de maquina.
-
-#### K-Nearest Neighbors (KNN)
-
