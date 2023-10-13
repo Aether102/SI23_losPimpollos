@@ -41,7 +41,7 @@ Cada color en los diagramas de dispersión representa un dígito diferente (0-9)
 
 ### Preprocesamiento
 
-La estandarización se realiza utilizando StandardScaler de scikit-learn, que estandariza el conjunto de datos para que tenga media = 0 y varianza = 1.
+La estandarización se realiza utilizando StandardScaler de scikit-learn, que estandariza el conjunto de datos para que tenga media=0 y varianza=1.
 ```
 scaler = StandardScaler()
 scaler.fit(data_train)
