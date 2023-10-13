@@ -157,3 +157,16 @@ def vis_preds(trained_model, data_val, target_val, model_name):
 ...
 plt.show()
 ```
+
+### Resultados
+### **K-Nearest Neighbor**
+![knn_visual](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/830697cb-366a-4137-b2aa-3e047111b704)
+
+### **SVM Linear**
+![svm_lin_visual](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/28f60b40-3ad1-46c8-80ee-0d62b7afbe18)
+
+### **SVM Radial**
+![svm_rbf_visual](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/21309955-7929-42bc-9d07-7172a92d3af4)
+
+### **K-Means**
+![kmenas_visual](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/b9641a02-c929-4120-ab26-e1ad8c7d0629)
