@@ -190,10 +190,9 @@ def evaluate_model(trained_model, data_val, target_val, model_name):
     precision = precision_score(target_val, preds, average='weighted')
     recall = recall_score(target_val, preds, average='weighted')
     f1 = f1_score(target_val, preds, average='weighted')
-    
-    print(f"Metrics for {model_name}:")
-    print(f"Accuracy score: {accuracy:.4f}")
-    print(f"Precision score: {precision:.4f}")
-    print(f"Recall score: {recall:.4f}")
-    print(f"F1 Score score: {f1:.4f}")
 ```
+**Resultados**
+<img width="144" alt="metricsknn" src="https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/f336bde2-5bad-49af-81c9-ac30a74b5219">
+<img width="148" alt="metricssvmlinear" src="https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/eda01249-0c89-4163-9c25-9cf083ef9b9e">
+<img width="141" alt="svmrbf metrica" src="https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/924c4b8a-20e2-4662-8423-227e37c22038">
+<img width="142" alt="kmenas metrics" src="https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/5b3be906-58c3-4ea8-9555-5c61d2591a19">
