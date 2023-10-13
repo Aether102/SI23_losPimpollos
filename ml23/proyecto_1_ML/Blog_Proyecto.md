@@ -51,9 +51,9 @@ scaler.fit(data_train)
 
 Utilizaremos tres modelos diferentes:
 
-- K-Nearest Neighbors (KNN)
-- Support Vector Machines (SVM)
-- K-Means Clustering
+- K-Nearest Neighbors (KNN) (aprendizaje supervisado)
+- Support Vector Machines (SVM) (aprendizaje supervisado)
+- K-Means Clustering (aprendizaje no supervisado)
 
 ```
 from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
