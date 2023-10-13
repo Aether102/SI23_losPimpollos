@@ -25,18 +25,4 @@ tsne = TSNE(n_components=2)
 data_tsne = tsne.fit_transform(data_val)
 ``` 
 2. Graficar nuevos datos uno al lado del otro
-```
-for c in labels:
-    indices = np.where(target_val == c)
-    
-    # PCA
-    plot_data_pca = data_pca[indices]
-    ax[0].scatter(plot_data_pca[:, 0], plot_data_pca[:, 1], label=f"Grupo {c}")
-    ax[0].set_title("PCA")
-    
-    # t-SNE
-    plot_data_tsne = data_tsne[indices]
-    ax[1].scatter(plot_data_tsne[:, 0], plot_data_tsne[:, 1], label=f"Grupo {c}")
-    ax[1].set_title("t-SNE")
-``` 
 ![pca_and_tsne](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/7597b5b8-262b-4740-aad8-edb0f00b561d)
