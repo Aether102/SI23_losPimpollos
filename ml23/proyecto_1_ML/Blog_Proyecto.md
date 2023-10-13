@@ -34,3 +34,5 @@ data_tsne = tsne.fit_transform(data_val)
 En este caso, t-SNE nos permite observar mas claramente los clusters dentro de los datos.
 
 **¿Qué representa cada color en este caso?**
+
+Cada color en los diagramas de dispersión representa un dígito diferente (0-9) en el conjunto de datos.
