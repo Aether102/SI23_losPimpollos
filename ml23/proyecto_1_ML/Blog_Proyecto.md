@@ -58,6 +58,8 @@ Utilizaremos tres modelos diferentes:
 
 **2. Support Vector Machines (SVM) (aprendizaje supervisado)**
 
+- *Linear: especifica un kernel lineal*
+- *RBF:  especifica un kernel de función de base radial (RBF), que es una opción popular para problemas no lineales. El parámetro gamma define hasta dónde llega la influencia de un único ejemplo de entrenamiento y se puede establecer en "escala", "automático" o un valor flotante.*
 - Efectivo en espacios de alta dimensión: dado que los datos de imagen pueden ser de alta dimensión, SVM es capaz de manejar esto a través de su efectividad en espacios de alta dimensión.
 - Truco del kernel: la capacidad de utilizar diferentes funciones del kernel permite a SVM resolver problemas no lineales, lo que puede ser beneficioso si los dígitos forman grupos separables no linealmente en el espacio de características.
 
