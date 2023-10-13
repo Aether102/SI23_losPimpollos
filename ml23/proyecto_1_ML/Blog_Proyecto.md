@@ -30,6 +30,8 @@ data_tsne = tsne.fit_transform(data_val)
 
 **¿Cual método de reducción de dimensionalidad funciona mejor en este caso?**
 
+**¿Que puedes deducir de esta imagen?**
+
 En este caso, t-SNE nos permite observar mas claramente los clusters dentro de los datos.
 
-**¿Que puedes deducir de esta imagen?**
+**¿Qué representa cada color en este caso?**
