@@ -12,7 +12,7 @@ Este script realiza la clasificación en el conjunto de datos de dígitos (MNIST
 ### Visualización en baja dimensionalidad
 La utilización de PCA y t-SNE para la reducción de dimensionalidad nos permite comparar e interpretar visualmente el conjunto de datos de alta dimensión en un espacio 2D uno al lado del otro.
 1. Importamos dependencias
-'''
+```
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
-'''
+```
