@@ -29,5 +29,7 @@ data_tsne = tsne.fit_transform(data_val)
 ![pca_and_tsne](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/7597b5b8-262b-4740-aad8-edb0f00b561d)
 
 **¿Cual método de reducción de dimensionalidad funciona mejor en este caso?**
+
 En este caso, t-SNE nos permite observar mas claramente los clusters dentro de los datos.
+
 **¿Que puedes deducir de esta imagen?**
