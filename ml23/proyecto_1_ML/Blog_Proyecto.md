@@ -69,9 +69,18 @@ Utilizaremos tres modelos diferentes:
 El uso de diferentes tipos de algoritmos permite realizar un análisis comparativo sólido. Estos algoritmos sirven como buenos puntos de referencia debido a su popularidad y amplio uso en la comunidad de aprendizaje de maquina.
 
 ### Procedimiento
-Importar clases requeridas
+1. Importar clases requeridas
 ```
 from sklearn.neighbors import KNeighborsClassifier # K Nearest Neigbors
 from sklearn.svm import SVC                        # Support Vector Classifier
 from sklearn.cluster import KMeans                 # K Means
+```
+2. Entrena el modelo y regresa modelo entrendo
+```
+    if model_type == "knn":
+        estimator = KNeighborsClassifier(n_neighbors=3)
+    elif model_type == "svm":
+        estimator = SVC(kernel='linear') 
+    elif model_type == "kmeans":
+        estimator = KMeans(n_clusters=len(np.unique(label)))  # Numero de clusters igual al numero de unique labels
 ```
