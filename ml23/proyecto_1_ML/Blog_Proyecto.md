@@ -94,6 +94,7 @@ return estimator
 ```
 
 ## 3. Evaluación y análisis de las predicciones
+### 3.1 (Inferencia) Datos de validación en baja dimensionalidad
 
 Graficar los datos de VALIDACIÓN reducidos
 ```
