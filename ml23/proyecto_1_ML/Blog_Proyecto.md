@@ -36,3 +36,5 @@ En este caso, t-SNE nos permite observar mas claramente los clusters dentro de l
 **¿Qué representa cada color en este caso?**
 
 Cada color en los diagramas de dispersión representa un dígito diferente (0-9) en el conjunto de datos.
+
+## Seccion 2: Entrenamiento
