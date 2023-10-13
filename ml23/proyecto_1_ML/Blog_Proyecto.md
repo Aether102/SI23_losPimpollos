@@ -120,3 +120,4 @@ Graficar los datos de VALIDACIÓN reducidos
 ### **K-Means**
 ![kmeans](https://github.com/DiegoMarin11/SI23_losPimpollos/assets/108961521/78ca7f66-7514-4fb6-8bca-cecb13f44f49)
 
+### 3.2 (Inferencia) Visualizar imagenes en cada grupo/clase
