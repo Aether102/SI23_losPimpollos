@@ -173,4 +173,27 @@ plt.show()
 
 En esta sección se evalúa los modelos entrenados en el conjunto de validación utilizando alguna métrica vista en clase (accuracy, F1, Precision, Recall etc.) y se determina cuantitativamente cual funciona mejor. 
 
-En el proyecto, se emplearon varias métricas de clasificación para evaluar cuantitativamente y comparar el rendimiento de diferentes modelos de aprendizaje(KNN, SVM y K-Means) en la tarea de clasificación de dígitos. Esto facilitó una comparación directa de los resultados, lo que permitió identificar el modelo que funcionó de manera óptima y proporcionó información valiosa sobre las fortalezas y debilidades de cada enfoque.
+En este proyecto, se emplearon varias métricas de clasificación para evaluar cuantitativamente y comparar el rendimiento de diferentes modelos de aprendizaje(KNN, SVM y K-Means) en la tarea de clasificación de dígitos. Esto facilitó una comparación directa de los resultados, lo que permitió identificar el modelo que funcionó de manera óptima y proporcionó información valiosa sobre las fortalezas y debilidades de cada enfoque.
+
+1. Importar clases
+```
+from sklearn import metrics
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+```
+2. Calcula la predicción y evalúa la calidad de predicción vs. las etiquetas reales (target_val)
+```
+def evaluate_model(trained_model, data_val, target_val, model_name):
+    # predicciones
+    preds = inference(trained_model, data_val)
+    
+    accuracy = accuracy_score(target_val, preds)
+    precision = precision_score(target_val, preds, average='weighted')
+    recall = recall_score(target_val, preds, average='weighted')
+    f1 = f1_score(target_val, preds, average='weighted')
+    
+    print(f"Metrics for {model_name}:")
+    print(f"Accuracy score: {accuracy:.4f}")
+    print(f"Precision score: {precision:.4f}")
+    print(f"Recall score: {recall:.4f}")
+    print(f"F1 Score score: {f1:.4f}")
+```
