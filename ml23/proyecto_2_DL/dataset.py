@@ -85,8 +85,7 @@ class FER2013(Dataset):
             self._labels = df['emotion'].values
 
     def _read_data(self):
-        base_folder = pathlib.Path(self.root) / "data"
-        
+        base_folder = pathlib.Path(self.root) / "data" #Diego: Cambio del path a downloads porque no me cabe el data set en onedrive(tengo todo sincronizado y tengo poco espacio)
         _split = "train" if self.split == "train" or "val" else "test"
         file_name = f"{_split}.csv"
         data_file = base_folder / file_name

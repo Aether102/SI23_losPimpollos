@@ -1,3 +1,4 @@
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -8,13 +9,27 @@ file_path = pathlib.Path(__file__).parent.absolute()
 
 class Network(nn.Module):
     def __init__(self, input_dim: int, n_classes: int) -> None:
+
         super().__init__()
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
         # TODO: Calcular dimension de salida
-        out_dim = ...
+        out_dim = self.calc_out_dim(input_dim,kernel_size= 5)
+        print("Out Dim:", out_dim)
 
         # TODO: Define las capas de tu red
+        self.layers =nn.Sequential(
+            nn.Conv2d(1, 16, kernel_size=5),
+            nn.ReLU(),
+            nn.Conv2d(16, 32, kernel_size=5),
+            nn.ReLU(),
+            nn.Conv2d(32, 64, kernel_size=5),
+            nn.Flatten(start_dim = 1),
+            nn.Linear(64 * out_dim * out_dim, 256),
+            nn.ReLU(),
+            nn.Linear(256 ,n_classes)
+        )
+        
 
         self.to(self.device)
  
@@ -24,7 +39,11 @@ class Network(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         # TODO: Define la propagacion hacia adelante de tu red
-        return logits, proba
+        print("Tensor X ",x.shape)
+        logits =self.layers(x)
+        #proba = F.softmax(logits, dim = 1)#se supone que linear ya aplica softmax al final
+
+        return logits 
 
     def predict(self, x):
         with torch.inference_mode():
@@ -39,7 +58,7 @@ class Network(nn.Module):
         '''
         models_path = file_path / 'models' / model_name
         # TODO: Guarda los pesos de tu red neuronal en el path especificado
-        torch.save( ... )
+        torch.save( self.state_dict(), models_path )
 
     def load_model(self, model_name: str):
         '''
@@ -48,3 +67,6 @@ class Network(nn.Module):
             - path (str): path relativo donde se guardó el modelo
         '''
         # TODO: Carga los pesos de tu red neuronal
+        models_path = file_path / 'models' / model_name
+        self.load_state_dict(torch.load(models_path))
+
