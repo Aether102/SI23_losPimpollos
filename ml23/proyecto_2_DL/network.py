@@ -11,26 +11,33 @@ class Network(nn.Module):
     def __init__(self, input_dim: int, n_classes: int) -> None:
 
         super().__init__()
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
+        #self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = 'cuda'
         # TODO: Calcular dimension de salida
         out_dim = self.calc_out_dim(input_dim,kernel_size= 5)
-        print("Out Dim:", out_dim)
-
+        #print("Out Dim:", out_dim)#para dos capas 40, tres 36...
+        torch.backends.cuda.matmul.allow_tf32 = True #Se supone que funciona solo para RTX 30XX, activa cores especificos para hacer convoluciones mas rapido
         # TODO: Define las capas de tu red
-        self.layers =nn.Sequential(
-            nn.Conv2d(1, 16, kernel_size=5),
-            nn.ReLU(),
-            nn.Conv2d(16, 32, kernel_size=5),
-            nn.ReLU(),
-            nn.Conv2d(32, 64, kernel_size=5),
-            nn.Flatten(start_dim = 1),
-            nn.Linear(64 * out_dim * out_dim, 256),
-            nn.ReLU(),
-            nn.Linear(256 ,n_classes)
-        )
-        
 
+        self.layers =nn.Sequential(
+            nn.Conv2d(1, 128, kernel_size=5),
+            nn.ReLU(),
+            nn.Conv2d(128, 178, kernel_size=5),
+            nn.ReLU(),
+            nn.Conv2d(178, 200, kernel_size=5),
+            nn.Flatten(start_dim = 1),
+            nn.Linear(200 * 36 * 36, 1024),
+            nn.ReLU(),
+            nn.Linear(1024,n_classes)#Esta red tarda ~1 hora por 5 epoch en entrenar [1024, 7]
+        )#Best_model1
+        
+        """
+        self.conv1 = nn.Conv2d(1,16 ,kernel_size= 5)
+        self.conv2 = nn.Conv2d(16,32 ,kernel_size= 5)
+        self.lineal1 = nn.Linear(32*40*40,1024)
+        self.lineal2 = nn.Linear(1024,n_classes)
+        """#ejemplo del CNN del jupyter
+        
         self.to(self.device)
  
     def calc_out_dim(self, in_dim, kernel_size, stride=1, padding=0):
@@ -39,11 +46,24 @@ class Network(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         # TODO: Define la propagacion hacia adelante de tu red
-        print("Tensor X ",x.shape)
+        #print("Tensor X ",x.shape)
         logits =self.layers(x)
-        #proba = F.softmax(logits, dim = 1)#se supone que linear ya aplica softmax al final
+        """
+        x = self.conv1(x)
+        x = F.relu(x)
+        x = self.conv2(x)
+        x = F.relu(x)
+        #print("Before Flatten Shape:", x.shape)
+        x = torch.flatten(x,start_dim= 1)
+        #print("After Flatten Shape:", x.shape)
+        x = self.lineal1(x)
+        x = F.relu(x)
+        x = self.lineal2(x)
+        logits = x
+        """
+        proba = F.softmax(logits, dim = 1)#se supone que linear ya aplica softmax al final
 
-        return logits 
+        return logits , proba
 
     def predict(self, x):
         with torch.inference_mode():

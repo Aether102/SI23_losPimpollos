@@ -26,7 +26,7 @@ def predict(img_title_paths):
     '''
     # Cargar el modelo
     modelo = Network(48, 7)
-    modelo.load_model("modelo_1.pt")
+    modelo.load_model("best_model1.pt")
     for path in img_title_paths:
         # Cargar la imagen
         # np.ndarray, torch.Tensor
@@ -34,6 +34,8 @@ def predict(img_title_paths):
         original, transformed, denormalized = load_img(im_file)
 
         # Inferencia
+        #print(transformed.cuda().shape)#[256,1 ,48, 48]
+        transformed = transformed.unsqueeze(0).cuda()# Agrega una dimension porque en training el modelo recibe [256, 1, 48, 48]
         logits, proba = modelo.predict(transformed)
         pred = torch.argmax(proba, -1).item()
         pred_label = EMOTIONS_MAP[pred]
@@ -53,5 +55,9 @@ def predict(img_title_paths):
 
 if __name__=="__main__":
     # Direcciones relativas a este archivo
-    img_paths = ["./test_imgs/happy.png"]
+    #img_paths = ["./test_imgs/ivan.png"]
+    #Abrimos todas las imagenes que se encuentren en la carpeta test_imgs para predecir cada una
+    test_imgs_folder = os.path.join(file_path, "test_imgs")
+    img_paths = [os.path.join(test_imgs_folder, f) for f in os.listdir(test_imgs_folder) if f.endswith(('.png', '.jpg', '.jpeg'))]
     predict(img_paths)
+    
